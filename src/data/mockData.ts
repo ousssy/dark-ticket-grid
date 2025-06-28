@@ -5,85 +5,85 @@ export const mockUsers: User[] = [
   {
     id: "1",
     name: "Ahmed Bennani",
-    role: "Technicien Électricité",
-    department: "Distribution Électrique",
+    role: "Chef de Développement Commercial",
+    department: "Développement Commercial",
     status: "available"
   },
   {
     id: "2",
     name: "Fatima Alaoui",
-    role: "Technicienne Eau",
-    department: "Distribution Eau",
+    role: "Responsable Clientèle Entreprises",
+    department: "Développement Commercial",
     status: "busy"
   },
   {
     id: "3",
     name: "Mohamed Ouali",
-    role: "Chef d'Équipe",
-    department: "Maintenance",
+    role: "Chargé de Développement",
+    department: "Développement Commercial",
     status: "available"
   },
   {
     id: "4",
     name: "Aicha Tazi",
-    role: "Technicienne Réseau",
-    department: "Infrastructure",
+    role: "Analyste Commercial",
+    department: "Développement Commercial",
     status: "available"
   },
   {
     id: "5",
     name: "Youssef Idrissi",
-    role: "Électricien Senior",
-    department: "Distribution Électrique",
+    role: "Conseiller Commercial Senior",
+    department: "Développement Commercial",
     status: "offline"
   },
   {
     id: "6",
     name: "Khadija Benjelloun",
-    role: "Ingénieure Eau",
-    department: "Distribution Eau",
+    role: "Gestionnaire Grands Comptes",
+    department: "Développement Commercial",
     status: "available"
   },
   {
     id: "7",
     name: "Rachid Sekkat",
-    role: "Technicien Maintenance",
-    department: "Maintenance",
+    role: "Chargé d'Affaires",
+    department: "Développement Commercial",
     status: "busy"
   },
   {
     id: "8",
     name: "Malika Fassi",
-    role: "Contrôleuse Qualité",
-    department: "Qualité",
+    role: "Responsable Marketing",
+    department: "Développement Commercial",
     status: "available"
   },
   {
     id: "9",
     name: "Omar Berrada",
-    role: "Technicien Compteurs",
-    department: "Facturation",
+    role: "Conseiller Commercial",
+    department: "Développement Commercial",
     status: "available"
   },
   {
     id: "10",
     name: "Zineb Naciri",
-    role: "Ingénieure Réseau",
-    department: "Infrastructure",
+    role: "Analyste Marché",
+    department: "Développement Commercial",
     status: "available"
   },
   {
     id: "11",
     name: "Hassan Lamrani",
-    role: "Chef de Secteur",
-    department: "Exploitation",
+    role: "Responsable Partenariats",
+    department: "Développement Commercial",
     status: "busy"
   },
   {
     id: "12",
     name: "Samira Kettani",
-    role: "Technicienne Urgence",
-    department: "Interventions",
+    role: "Chargée Communication",
+    department: "Développement Commercial",
     status: "available"
   }
 ];
