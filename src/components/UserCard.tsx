@@ -28,9 +28,9 @@ const UserCard = ({ user, onCreateTicket }: UserCardProps) => {
       case 'available':
         return 'Disponible';
       case 'busy':
-        return 'Occupé';
+        return 'En intervention';
       case 'offline':
-        return 'Hors ligne';
+        return 'Indisponible';
       default:
         return 'Inconnu';
     }
@@ -69,7 +69,7 @@ const UserCard = ({ user, onCreateTicket }: UserCardProps) => {
           disabled={user.status === 'offline'}
         >
           <UserPlus className="w-4 h-4 mr-2" />
-          Créer un ticket
+          Créer une intervention
         </Button>
       </div>
     </div>

@@ -1,6 +1,6 @@
 
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { Home, Ticket, BarChart3, Menu, X } from "lucide-react";
+import { Home, Ticket, BarChart3, Menu, X, Zap } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -25,9 +25,9 @@ const Layout = () => {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-accent to-blue-400 rounded-lg flex items-center justify-center">
-                <Ticket className="w-5 h-5 text-white" />
+                <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold gradient-text">GLPI Pro</span>
+              <span className="text-xl font-bold gradient-text">RADEMA Marrakech</span>
             </div>
 
             {/* Desktop Navigation */}

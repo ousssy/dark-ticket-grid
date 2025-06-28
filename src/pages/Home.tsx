@@ -35,11 +35,11 @@ const Home = () => {
         <div className="flex items-center justify-center space-x-2 mb-4">
           <Sparkles className="w-8 h-8 text-accent" />
           <h1 className="text-4xl font-bold gradient-text">
-            Centre d'Intervention
+            RADEMA Marrakech
           </h1>
         </div>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Sélectionnez un intervenant pour créer un nouveau ticket d'intervention
+          Système de gestion des interventions techniques - Régie Autonome de Distribution d'Eau et d'Électricité de Marrakech
         </p>
       </div>
 
@@ -49,7 +49,7 @@ const Home = () => {
           <Users className="w-5 h-5 text-accent" />
           <span className="text-2xl font-bold">{mockUsers.length}</span>
         </div>
-        <p className="text-muted-foreground">Intervenants disponibles</p>
+        <p className="text-muted-foreground">Techniciens disponibles</p>
       </div>
 
       {/* Users Grid */}

@@ -53,9 +53,9 @@ const Dashboard = () => {
     <div className="space-y-8 animate-fade-in">
       {/* Header */}
       <div className="text-center space-y-4">
-        <h1 className="text-3xl font-bold gradient-text">Dashboard</h1>
+        <h1 className="text-3xl font-bold gradient-text">Tableau de Bord RADEMA</h1>
         <p className="text-muted-foreground">
-          Vue d'ensemble de l'activité des tickets d'intervention
+          Suivi des interventions techniques - Distribution Eau & Électricité Marrakech
         </p>
       </div>
 
@@ -66,7 +66,7 @@ const Dashboard = () => {
             <TrendingUp className="w-6 h-6 text-accent" />
           </div>
           <div className="text-2xl font-bold text-foreground">{tickets.length}</div>
-          <div className="text-sm text-muted-foreground">Total Tickets</div>
+          <div className="text-sm text-muted-foreground">Total Interventions</div>
         </div>
 
         <div className="glass-effect rounded-xl p-6 text-center card-hover">
@@ -76,7 +76,7 @@ const Dashboard = () => {
           <div className="text-2xl font-bold text-blue-400">
             {tickets.filter(t => t.status === 'open').length}
           </div>
-          <div className="text-sm text-muted-foreground">Tickets Ouverts</div>
+          <div className="text-sm text-muted-foreground">Interventions Ouvertes</div>
         </div>
 
         <div className="glass-effect rounded-xl p-6 text-center card-hover">
@@ -96,7 +96,7 @@ const Dashboard = () => {
           <div className="text-2xl font-bold text-green-400">
             {tickets.filter(t => t.status === 'closed').length}
           </div>
-          <div className="text-sm text-muted-foreground">Tickets Fermés</div>
+          <div className="text-sm text-muted-foreground">Interventions Terminées</div>
         </div>
       </div>
 
@@ -106,7 +106,7 @@ const Dashboard = () => {
         <div className="glass-effect rounded-xl p-6">
           <h3 className="text-lg font-semibold mb-6 flex items-center space-x-2">
             <TrendingUp className="w-5 h-5 text-accent" />
-            <span>Tickets par Semaine</span>
+            <span>Interventions par Semaine</span>
           </h3>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">

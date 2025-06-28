@@ -53,8 +53,8 @@ const TicketModal = ({ isOpen, onClose, user, onSave }: TicketModalProps) => {
     setPriority("medium");
     
     toast({
-      title: "Ticket créé",
-      description: `Le ticket pour ${user.name} a été créé avec succès.`,
+      title: "Intervention créée",
+      description: `L'intervention pour ${user.name} a été créée avec succès.`,
     });
     
     onClose();
@@ -90,7 +90,7 @@ const TicketModal = ({ isOpen, onClose, user, onSave }: TicketModalProps) => {
         <DialogHeader>
           <DialogTitle className="flex items-center space-x-2 text-xl">
             <TicketIcon className="w-5 h-5 text-accent" />
-            <span>Nouveau Ticket</span>
+            <span>Nouvelle Intervention RADEMA</span>
           </DialogTitle>
         </DialogHeader>
 
@@ -114,11 +114,11 @@ const TicketModal = ({ isOpen, onClose, user, onSave }: TicketModalProps) => {
           {/* Description */}
           <div className="space-y-2">
             <Label htmlFor="description" className="text-sm font-medium">
-              Description de la tâche *
+              Description de l'intervention *
             </Label>
             <Textarea
               id="description"
-              placeholder="Décrivez la tâche ou le problème à résoudre..."
+              placeholder="Décrivez l'intervention à réaliser (panne électrique, fuite d'eau, maintenance...)..."
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               className="min-h-[100px] resize-none bg-muted/50 border-border/50 focus:border-accent/50"
@@ -167,11 +167,11 @@ const TicketModal = ({ isOpen, onClose, user, onSave }: TicketModalProps) => {
           {/* Comment */}
           <div className="space-y-2">
             <Label htmlFor="comment" className="text-sm font-medium">
-              Commentaire
+              Commentaire / Localisation
             </Label>
             <Textarea
               id="comment"
-              placeholder="Ajoutez des détails supplémentaires si nécessaire..."
+              placeholder="Ajoutez des détails supplémentaires (adresse, matériel nécessaire...)..."
               value={comment}
               onChange={(e) => setComment(e.target.value)}
               className="min-h-[80px] resize-none bg-muted/50 border-border/50 focus:border-accent/50"
@@ -194,7 +194,7 @@ const TicketModal = ({ isOpen, onClose, user, onSave }: TicketModalProps) => {
               className="flex-1 bg-accent hover:bg-accent/90 text-accent-foreground"
             >
               <Save className="w-4 h-4 mr-2" />
-              Enregistrer
+              Créer l'intervention
             </Button>
           </div>
         </form>
