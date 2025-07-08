@@ -18,6 +18,8 @@ export interface Ticket {
   priority: 'low' | 'medium' | 'high' | 'urgent';
   createdAt: string;
   updatedAt: string;
+  reclamationChefService?: string;
+  reclamationChefDepartement?: string;
 }
 
 export interface TicketStats {

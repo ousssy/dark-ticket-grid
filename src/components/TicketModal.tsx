@@ -22,6 +22,8 @@ const TicketModal = ({ isOpen, onClose, user, onSave }: TicketModalProps) => {
   const [description, setDescription] = useState("");
   const [comment, setComment] = useState("");
   const [priority, setPriority] = useState<Ticket['priority']>("medium");
+  const [reclamationChefService, setReclamationChefService] = useState("");
+  const [reclamationChefDepartement, setReclamationChefDepartement] = useState("");
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -43,6 +45,8 @@ const TicketModal = ({ isOpen, onClose, user, onSave }: TicketModalProps) => {
       comment: comment.trim(),
       status: 'open' as const,
       priority,
+      reclamationChefService: reclamationChefService.trim() || undefined,
+      reclamationChefDepartement: reclamationChefDepartement.trim() || undefined,
     };
 
     onSave(ticketData);
@@ -51,6 +55,8 @@ const TicketModal = ({ isOpen, onClose, user, onSave }: TicketModalProps) => {
     setDescription("");
     setComment("");
     setPriority("medium");
+    setReclamationChefService("");
+    setReclamationChefDepartement("");
     
     toast({
       title: "Intervention créée",
@@ -64,6 +70,8 @@ const TicketModal = ({ isOpen, onClose, user, onSave }: TicketModalProps) => {
     setDescription("");
     setComment("");
     setPriority("medium");
+    setReclamationChefService("");
+    setReclamationChefDepartement("");
     onClose();
   };
 
@@ -86,7 +94,7 @@ const TicketModal = ({ isOpen, onClose, user, onSave }: TicketModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-md bg-card border-border animate-scale-in">
+      <DialogContent className="sm:max-w-md bg-card border-border animate-scale-in max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="flex items-center space-x-2 text-xl">
             <TicketIcon className="w-5 h-5 text-accent" />
@@ -174,6 +182,34 @@ const TicketModal = ({ isOpen, onClose, user, onSave }: TicketModalProps) => {
               placeholder="Ajoutez des détails supplémentaires (adresse, matériel nécessaire...)..."
               value={comment}
               onChange={(e) => setComment(e.target.value)}
+              className="min-h-[80px] resize-none bg-muted/50 border-border/50 focus:border-accent/50"
+            />
+          </div>
+
+          {/* Réclamation Chef de Service */}
+          <div className="space-y-2">
+            <Label htmlFor="reclamationChefService" className="text-sm font-medium">
+              Réclamation au Chef de Service
+            </Label>
+            <Textarea
+              id="reclamationChefService"
+              placeholder="Décrivez votre réclamation ou observation à l'attention du chef de service..."
+              value={reclamationChefService}
+              onChange={(e) => setReclamationChefService(e.target.value)}
+              className="min-h-[80px] resize-none bg-muted/50 border-border/50 focus:border-accent/50"
+            />
+          </div>
+
+          {/* Réclamation Chef de Département */}
+          <div className="space-y-2">
+            <Label htmlFor="reclamationChefDepartement" className="text-sm font-medium">
+              Réclamation au Chef de Département
+            </Label>
+            <Textarea
+              id="reclamationChefDepartement"
+              placeholder="Décrivez votre réclamation ou observation à l'attention du chef de département..."
+              value={reclamationChefDepartement}
+              onChange={(e) => setReclamationChefDepartement(e.target.value)}
               className="min-h-[80px] resize-none bg-muted/50 border-border/50 focus:border-accent/50"
             />
           </div>
